@@ -1,0 +1,24 @@
+// 회원 ID, PW 입력 text
+// Create register, login button 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HELLO~ JJBJ_LOGIN</title>
+</head>
+<body>
+	<h2>Hello~ JJBJ_LOGIN</h2>
+	<h3>Provide member information</h3>
+	<form action = "NewFile.jsp" method = "POST">
+		memberID: <input type ="text" name = "M_id">
+		<br />
+		memberPW: <input type = "text" name = "M_pw">
+		<br />
+		<input type = "submit" value ="Register">
+		<input type = "submit" value = "Login">
+		
+	</form>
+</body>
+</html>
