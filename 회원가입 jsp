@@ -11,7 +11,7 @@
 <body>
 	<h2>회원가입</h2>
 	<h3>Provide member information</h3>
-	<h4>(You must input >*<)</h4>
+	<h4>(You must input >*< and You must input only English.)</h4>
 		*ID: <input type ="text" name = "M_id">
 		<br />	
 		<br />
