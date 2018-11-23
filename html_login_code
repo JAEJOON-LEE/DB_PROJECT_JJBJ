@@ -45,7 +45,11 @@
 		PW: <input type = "text" name = "M_pw">
 		<br />
 		<br />
-		<input type = "submit" value ="SIGN-UP">
+		<button onclick="window.open('회원가입.jsp', 'SIGN-UP', 'width=430, height=500, location=no, status=no, srollbars=yes');">SIGN UP</button>
 		<input type = "submit" value = "SIGN-IN">
 </body>
+</html>
+
+//SIGN-UP 버튼 클릭시, 회원가입 팝업창(윈도우창)으로 이동할 수 있도록 버튼 onclick 코드 추가// 2018/11/23
+</html>버튼
 </html>
