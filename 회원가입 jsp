@@ -40,3 +40,48 @@
 	</form>
 </body>
 </html>
+
+<%--register 클릭 시 창닫기 추가--%>
+
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+
+<%@ page language="java" import="java.text.*, java.sql.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>회원가입</title>
+</head>
+<body>
+	<h2>회원가입</h2>
+	<h3>Provide member information</h3>
+	<h4>(You must input >*< and You must input only English.)</h4>
+		*ID: <input type ="text" name = "M_id">
+		<br />	
+		<br />
+		*PW: <input type = "text" name = "M_pw">
+		<br />
+		*PW CHECK: <input type = "text" name = "M_pw">
+		<br />
+		<br />
+		*HP: <input type = "text" name = "M_hp">
+		<br />
+		*ADDRESS: <input type = "text" name = "M_ad">
+		<br />
+		<br />
+		<br />
+		SEX: <select name = "M_sex">
+				<option value = "M">M</option>
+				<option value = "W">W</option>
+				</select>
+		<br />
+		AGE: <input type = "text" name = "M_age">
+		<br />
+		JOB: <input type = "text" name = "M_job">
+		<br />
+		<br />
+		<input type = "submit" value ="Register" onClick="window.close()">
+	</form>
+</body>
+</html>
