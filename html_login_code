@@ -54,3 +54,35 @@
 //SIGN-IN 버튼 클릭시, 회원으로 등록된 사용자가 로그인 했을 경우, 다음 실행 페이지로 넘어갈 수 있도록 버튼 onclick 코드를 추가함// 2018/11/23
 </html>버튼
 </html>
+
+----------
+password 가리기 추가
+
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+
+<%@ page language="java" import="java.text.*, java.sql.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>로그인</title>
+</head>
+<body>
+	<h2>Log-In</h2>
+	<h3>Provide member information</h3>
+		ID: <input type ="text" name = "M_id">
+		<br />	
+		<br />
+		PW: <input type="password" name="M_pw">
+		<br />
+		<br />
+		<button onclick="window.open('createMember.jsp', 'SIGN-UP', 'width=30, height=30, location=no, status=no, srollbars=yes');">SIGN UP</button>
+		<button onclick="location.href='shop.html'">SIGN IN</button>
+</body>
+</html>
+
+<%-- SIGN-UP 버튼 클릭시, 회원가입 팝업창(윈도우창)으로 이동할 수 있도록 버튼 onclick 코드 추가// 2018/11/23 --%>
+<%--//SIGN-IN 버튼 클릭시, 회원으로 등록된 사용자가 로그인 했을 경우, 다음 실행 페이지로 넘어갈 수 있도록 버튼 onclick 코드를 추가함// 2018/11/23 --%>
+</html>
+</html>
