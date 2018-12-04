@@ -1,0 +1,60 @@
+sql = "select P_ID from shoppingBag where P_id=" +o_id;
+sql = "select pname from items where PID =" + o_id;
+sql = "select id from customer where id = " +id ;
+sql = "SELECT DISTINCT PID, PNAME, PRICE, ORDER_DATE FROM ORDER_DETAIL, ITEMS WHERE PID = C_ID AND C_ID = " +customer_id;
+sql = "select distinct pname, price, pid from items";
+sql2 = "select AQ from TOTAL where pid = " + rs.getInt(3) ;	
+sql2 = "select AQ from TOTAL where pid = " + rs.getInt(3) ;	
+sql = "SELECT P_ID, P_quant, P_price, order_date, C_ID FROM ORDER_DETAIL2";
+sql = "SELECT PNAME from items where pid = "+ rs2.getInt(1);
+sql = "select pname from ITEMS, shoppingBag where P_ID= " +d_id + " and P_ID = PID";
+sql = "select P_ID from shoppingBag where P_ID = " + d_id;
+String sql = "select * from customer where id = ?";
+String sql = "select id from customer where id = " +id;
+sql = "insert into customer (id, pw, hp, address, sex, age, job, order_count, retailer_num) values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+String sql = "select * from customer where id = ?";
+sql = "select id from customer where id = " +id ;
+sql = "select * from temp14";
+sql = "SELECT DISTINCT PID, PNAME, PRICE, P_quant FROM shoppingBag, ITEMS WHERE PID=P_ID AND C_ID = " +customer_id + " ORDER BY PID ASC";
+sql = "SELECT DISTINCT PID, PNAME, PRICE, P_quant FROM shoppingBag, ITEMS WHERE PID=P_ID AND C_ID = " +customer_id;
+ 					
+sql =  "select distinct t.pid, i.pname, i.price, t.aq from items i, total t where t.pid=i.pid and i.category_big = '" +big+"' and i.category_small = '" + small+"';";
+	
+sql = "select id, age from customer where id = " +id ;
+
+sql = "CREATE VIEW TEMP7 AS SELECT ID FROM CUSTOMER WHERE AGE BETWEEN " + (tmp) + " AND " + (tmp + 9);
+
+sql = "CREATE VIEW TEMP9 AS SELECT P_ID, COUNT(*) QUANT FROM ORDER_DETAIL, TEMP7 WHERE C_ID = ID GROUP BY P_ID ORDER BY QUANT  DESC LIMIT 1";
+
+sql = "CREATE VIEW TEMP10 AS SELECT O.C_ID FROM ORDER_DETAIL O WHERE O.P_ID = (SELECT P_ID FROM TEMP9)";
+
+sql = "CREATE VIEW TEMP12 AS SELECT P_ID, COUNT(*) QUANT FROM TEMP11 GROUP BY P_ID ORDER BY QUANT DESC LIMIT 5";
+
+sql = "create view temp13 as select DISTINCT i.P_ID, t.AQ FROM temp12 i, TOTAL t where i.P_ID = t.PID";
+
+sql = "select DISTINCT PID, PNAME, PRICE, AQ FROM temp13, ITEMS where PID=P_ID";
+ 	    		pstmt = con.prepareStatement(sql);
+
+
+sql = "select distinct pid, pname, price from items where pname like '%" + part + "%'";
+		sql2 = "select DISTINCT t.AQ from TOTAL t, items i where i.PID = t.pid and i.pname like '%" + part + "%'" ;
+	}
+
+sql = "select distinct pid, pname, price from items order by pid ASC";
+		sql2 = "select distinct AQ from TOTAL" ;
+	}
+
+
+else
+	{
+		sql = "select distinct pid, pname, price from items where pid = " + part;
+		sql2 = "select distinct AQ from TOTAL where pid = " + part;
+	}
+
+
+sql = "SELECT P_ID, P_quant, P_price, order_date FROM ORDER_DETAIL2 WHERE C_ID = " + id;
+
+sql = "SELECT PNAME from items where pid = "+ rs2.getInt(1);
+
+---------------------
+
