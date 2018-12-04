@@ -63,3 +63,24 @@ CREATE INDEX INDEXonITEMS ON ITEMS (PID, PNAME);
 CREATE INDEX INDEXonTOTAL ON TOTAL (PID);
 CREATE INDEX INDEXonCUSTOMER ON CUSTOMER(ID);
 CREATE INDEX INDEXonSHOPPINGBAG ON SHOPPINGBAG (C_ID, P_ID);
+
+CREATE INDEX INDEXonITEMS ON ITEMS (PID, PNAME);
+ITEMS의 Attribute인 PID는 관리자가 재고를 추가를 하거나 고객이 상품을 검색, 장바구니에 담을 경우 
+상품의 정보를 보여주기 위해 SELECT의 WHERE절에서 많이 사용되어 인덱스를 생성하였습니다.
+PID와 PNAME은 거의 동일한 역할을 하고 있으나, 
+PNAME보다는 PID로 쿼리를 사용하는 경우가 더 많아 PID를 우선시 하게 되었습니다.
+ 
+	
+CREATE INDEX INDEXonTOTAL ON TOTAL (PID);
+TOTAL은 모든 상품들의 PID와 그에 해당하는 총량을 가지고 있으며, 관리자가 재고를 추가하거나 고객이 상품을 구매할 때 쿼리가 필요하게 됩니다. 또한, 상품의 정보를 보여줄 때 마다 PID에 해당하는 수량 정보까지 제공하는 등 쿼리에서 PID를 참조하는 경우가 많이 발생하여 인덱스를 생성하였습니다.
+
+CREATE INDEX INDEXonCUSTOMER ON CUSTOMER(ID);
+shoppingBag, order_detail2 등의 테이블은 특정 고객이 장바구니에 담은 상품과 구매한 상품들의 정보를 가지고 있습니다. 특정 고객이 로그인하여 장바구니와 과거주문내역을 확인하고자 할 때 마다 쿼리에서 고객의 ID가 필요하게 되어 인덱스로 생성하게 되었습니다.
+
+	
+CREATE INDEX INDEXonSHOPPINGBAG ON SHOPPINGBAG (C_ID, P_ID);
+SHOPPINGBAG에는 모든 고객에 해당하는 장바구니 정보가 담겨있습니다. 특정 고객에게 자신의 장바구니 내용만 보여주어야 하기 때문에 C_ID를 우선적으로 하여 고객 ID에 해당하는 장바구니 목록을 가져온 뒤, P_ID를 통해 장바구니에 담은 상품의 정보 또한 확인하게 되므로 카디널리티가 높은 C_ID를 우선시하여 인덱스를 생성하였습니다.
+
+ 
+	
+
